@@ -13,8 +13,8 @@ export class JokeComponent implements OnInit {
   constructor(private jokesService: JokesRepoService) { }
 
   ngOnInit(): void {
-    this.jokesService.getRandomJoke().subscribe( (res) =>{
-      console.log(res)
+    this.jokesService.getRandomJoke().subscribe(res => {
+      //console.log(res);
       this.joke= res.joke;
     });
   }

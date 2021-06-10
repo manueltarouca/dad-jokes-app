@@ -27,7 +27,7 @@ export class JokesRepoService {
     .pipe(
       retry(1),
       catchError(this.processError)
-    )
+    );
   }
 
   private processError(error) {
